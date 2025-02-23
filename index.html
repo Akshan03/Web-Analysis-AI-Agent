@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Analysis Agent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="history-sidebar">
+            <h2>Chat History</h2>
+            <div id="history-container"></div>
+        </div>
+        
+        <div class="main-content">
+            <div class="header">
+                <h1>Web Content Analyzer</h1>
+                <div class="input-group">
+                    <input type="text" id="urlInput" placeholder="Enter URL...">
+                    <input type="text" id="questionInput" placeholder="Enter your question...">
+                    <button onclick="analyzeContent()">Analyze</button>
+                </div>
+            </div>
+            
+            <div id="output-container">
+                <div class="response-box">
+                    <div id="answer-container"></div>
+                    <div id="metrics-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

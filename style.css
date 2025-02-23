@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #2a2f4c;
+    --secondary-color: #4a5266;
+    --accent-color: #7c93c3;
+    --text-color: #e6e6fa;
+    --background-color: #1a1a2e;
+    --success-color: #4CAF50;
+    --warning-color: #ffa500;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.history-sidebar {
+    width: 250px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 2px solid var(--accent-color);
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+button {
+    padding: 12px 25px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6b7fa3;
+}
+
+.response-box {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 300px;
+    flex-grow: 1;
+    position: relative;
+}
+
+#answer-container {
+    white-space: pre-wrap;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#metrics-container {
+    padding: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    margin-top: auto;
+}
+
+.history-item {
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.history-item:hover {
+    background-color: #3a4052;
+}
+
+.history-item.active {
+    background-color: var(--accent-color);
+}
+
+#answer-container::after {
+    content: '▌';
+    animation: blink 1s step-end infinite;
+    color: var(--accent-color);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1 }
+    50% { opacity: 0 }
+}
